@@ -1,88 +1,88 @@
-lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/6xQ5gtbj"))();
-loc一个l Or我onL我b = lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/FUEx0f3G"))()
-loc一个l W我ndow = Or我onL我b:米一个keW我ndow({N一个米e = "J一个y脚本", H我dePre米我u米 = f一个lse, S一个veConf我g = f一个lse, 我ntroText = "欢迎使用", Conf我gFolder = "不喜勿喷，缝合脚本"})
+loadstring(game:HttpGet("https://pastebin.com/raw/6xQ5gtbj"))();
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/FUEx0f3G"))()
+local Window = OrionLib:MakeWindow({Name = "Jay脚本", HidePremium = false, SaveConfig = false, IntroText = "欢迎使用", ConfigFolder = "不喜勿喷，缝合脚本"})
 
-loc一个l T一个b = W我ndow:米一个keT一个b({
-    N一个米e = "J一个y缝合脚本",
-    我con = "rbx一个sset我d://7734068321",
-    Pre米我u米Only = f一个lse
+local Tab = Window:MakeTab({
+    Name = "Jay缝合脚本",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
 })
 
-T一个b:AddP一个r一个gr一个ph("作者","J一个y")
-T一个b:AddL一个bel("此脚本完全免费")
+Tab:AddParagraph("作者","Jay")
+Tab:AddLabel("此脚本完全免费")
 
-loc一个l T一个b = W我ndow:米一个keT一个b({
-	N一个米e = "通用功能",
-	我con = "rbx一个sset我d://7734068321",
-	Pre米我u米Only = f一个lse
+local Tab = Window:MakeTab({
+	Name = "通用功能",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
 })
 
-T一个b:AddButton({
-  N一个米e = "HUA 光影",
-  C一个llb一个ck = funct我on()
-    lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/一个rzRCgwS"))()
+Tab:AddButton({
+  Name = "HUA 光影",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/arzRCgwS"))()
   end
 })
 
-T一个b:AddButton({
-  N一个米e = "光影_2",
-  Def一个ult = f一个lse,
-  C一个llb一个ck = funct我on()
-    lo一个dstr我ng(g一个米e:HttpGet("https://r一个w.g我thubusercontent.co米/米ZEEN2424/Gr一个ph我cs/米一个我n/Gr一个ph我cs.x米l"))()
+Tab:AddButton({
+  Name = "光影_2",
+  Default = false,
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
   end
 })
 
-T一个b:AddButton({
-	N一个米e = "超高画质",
-	C一个llb一个ck = funct我on()
-lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/jHBfJY米S"))()
+Tab:AddButton({
+	Name = "超高画质",
+	Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
 end
 })    
 
-T一个b:AddButton({
-  N一个米e = "旋转",
-  C一个llb一个ck = funct我on()
-    lo一个dstr我ng(g一个米e:HttpGet('https://p一个steb我n.co米/r一个w/r97d7dS0', true))()
+Tab:AddButton({
+  Name = "旋转",
+  Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
   end
 })
 
-T一个b:AddToggle({
-	N一个米e = "夜视",
-	Def一个ult = f一个lse,
-	C一个llb一个ck = funct我on(V一个lue)
-		我f V一个lue then
-		    g一个米e.L我ght我ng.A米b我ent = Color3.new(1, 1, 1)
+Tab:AddToggle({
+	Name = "夜视",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
 		else
-		    g一个米e.L我ght我ng.A米b我ent = Color3.new(0, 0, 0)
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
 		end
 	end
 })
  
-T一个b:AddButton({
-	N一个米e = "飞车",
-	C一个llb一个ck = funct我on()
-lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/米HE1cbWF"))()
+Tab:AddButton({
+	Name = "飞车",
+	Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
 	end
 })
 
-T一个b:AddButton({
-	N一个米e = "爬墙",
-	C一个llb一个ck = funct我on()
-lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/zXk4Rq2r"))()
+Tab:AddButton({
+	Name = "爬墙",
+	Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
 end
 })
 
-T一个b:AddButton({
-    N一个米e = "动作",
-    C一个llb一个ck = funct我on()
-    lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/Zj4NnKs6"))()
+Tab:AddButton({
+    Name = "动作",
+    Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Zj4NnKs6"))()
     end
 })
 
-T一个b:AddButton({
-	N一个米e = "电脑键盘",
-	C一个llb一个ck = funct我on()
-     lo一个dstr我ng(g一个米e:HttpGet("https://r一个w.g我thubusercontent.co米/一个dvxz我vhsjjdhxhs我d我fvsh/米obkeybo一个rd/米一个我n/米一个我n.txt", true))()
+Tab:AddButton({
+	Name = "电脑键盘",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
   	end    
 })
 
@@ -159,7 +159,7 @@ player:AddButton({
 	Name = "透视",
 	Callback = function()
       	local FillColor = Color3.fromRGB(175,25,255)
-local Depth米ode = "AlwaysOnTop"
+local DepthMode = "AlwaysOnTop"
 local FillTransparency = 0.5
 local OutlineColor = Color3.fromRGB(255,255,255)
 local OutlineTransparency = 0
@@ -169,15 +169,15 @@ local Players = game:FindService("Players")
 local lp = Players.LocalPlayer
 local connections = {}
 
-local Storage = 我nstance.new("Folder")
+local Storage = Instance.new("Folder")
 Storage.Parent = CoreGui
 Storage.Name = "Highlight_Storage"
 
 local function Highlight(plr)
-    local Highlight = 我nstance.new("Highlight")
+    local Highlight = Instance.new("Highlight")
     Highlight.Name = plr.Name
     Highlight.FillColor = FillColor
-    Highlight.Depth米ode = DepthMode
+    Highlight.DepthMode = DepthMode
     Highlight.FillTransparency = FillTransparency
     Highlight.OutlineColor = OutlineColor
     Highlight.OutlineTransparency = 0
@@ -198,55 +198,55 @@ for i,v in next, Players:GetPlayers() do
     Highlight(v)
 end
 
-Pl一个yers.Pl一个yerRe米ov我ng:Connect(funct我on(plr)
-本地plrname=plr.Nameloc一个l plrn一个米e = plr.N一个米e
-如果存储[plrname]，则我f Storage[plrna米e] then
-存储[plrname]：销毁()Storage[plrna米e]:Destroy()
-结束end
-如果连接[plr]，则我f connect我ons[plr] then
-connections[plr]：Disconnect()connections[plr]:Disconnect()
-结束end
+Players.PlayerRemoving:Connect(function(plr)
+    local plrname = plr.Name
+    if Storage[plrname] then
+        Storage[plrname]:Destroy()
+    end
+    if connections[plr] then
+        connections[plr]:Disconnect()
+    end
 end)
-结束end
+  	end
 })
 
 player:AddButton({
-name="传送玩家"，Name = "传送玩家",
-callback=函数()Callback = function()
-loadstring(游戏：HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
-结束end
+	Name = "传送玩家",
+	Callback = function()
+      	loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+  	end
 })
 
 player:AddButton({
-name="fps显示"，Name = "fps显示",
-callback=函数()Callback = function()
-loadstring(游戏：HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()
-结束end
+	Name = "fps显示",
+	Callback = function()
+      	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()
+  	end
 })
 
 player:AddButton({
-name="玩家进入提示"，Name = "玩家进入提示",
-callback=函数()Callback = function()
-loadstring(游戏：HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
-结束end
+	Name = "玩家进入提示",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
+  	end
 })
 
-local本地选项卡=窗口：MakeTab({Tab = Window:米akeTab({
-name="小黑子"，Name = "小黑子",
-icon="rbxassetid://7734068321"，我con = "rbxassetid://7734068321",
-PremiumOnly=falsePremiumOnly = false
+local Tab = Window:MakeTab({
+	Name = "小黑子",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
 })
 
 Tab:AddButton({
-name="1"，Name = "1",
-callback=函数()Callback = function()
-loadstring(game:HttpGet(('https://gist.githubusercontent.com/blox-hub-roblox/021bad62bbc6a0adc4ba4e625f9ad7df/raw/c89af6e1acf587d09e4ce4bc7510e7100e0c0065/swordWarrior.lua'),true))()loadstring(game:HttpGet(('https://gist.githubusercontent.com/blox-hub-roblox/021bad62bbc6a0adc4ba4e625f9ad7df/raw/c89af6e1acf587d09e4ce4bc7510e7100e0c0065/swordWarrior.lua'),true))()
+  Name = "1",
+  Callback = function()
+    loadstring(game:HttpGet(('https://gist.githubusercontent.com/blox-hub-roblox/021bad62bbc6a0adc4ba4e625f9ad7df/raw/c89af6e1acf587d09e4ce4bc7510e7100e0c0065/swordWarrior.lua'),true))()
   end
 })
 
 Tab:AddButton({
   Name = "2",
   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tora我s米e/Tora我s米e/main/0SwordWarriors"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0SwordWarriors"))()
   end
 })
