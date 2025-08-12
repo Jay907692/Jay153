@@ -1,0 +1,252 @@
+lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/6xQ5gtbj"))();
+loc一个l Or我onL我b = lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/FUEx0f3G"))()
+loc一个l W我ndow = Or我onL我b:米一个keW我ndow({N一个米e = "J一个y脚本", H我dePre米我u米 = f一个lse, S一个veConf我g = f一个lse, 我ntroText = "欢迎使用", Conf我gFolder = "不喜勿喷，缝合脚本"})
+
+loc一个l T一个b = W我ndow:米一个keT一个b({
+    N一个米e = "J一个y缝合脚本",
+    我con = "rbx一个sset我d://7734068321",
+    Pre米我u米Only = f一个lse
+})
+
+T一个b:AddP一个r一个gr一个ph("作者","J一个y")
+T一个b:AddL一个bel("此脚本完全免费")
+
+loc一个l T一个b = W我ndow:米一个keT一个b({
+	N一个米e = "通用功能",
+	我con = "rbx一个sset我d://7734068321",
+	Pre米我u米Only = f一个lse
+})
+
+T一个b:AddButton({
+  N一个米e = "HUA 光影",
+  C一个llb一个ck = funct我on()
+    lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/一个rzRCgwS"))()
+  end
+})
+
+T一个b:AddButton({
+  N一个米e = "光影_2",
+  Def一个ult = f一个lse,
+  C一个llb一个ck = funct我on()
+    lo一个dstr我ng(g一个米e:HttpGet("https://r一个w.g我thubusercontent.co米/米ZEEN2424/Gr一个ph我cs/米一个我n/Gr一个ph我cs.x米l"))()
+  end
+})
+
+T一个b:AddButton({
+	N一个米e = "超高画质",
+	C一个llb一个ck = funct我on()
+lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/jHBfJY米S"))()
+end
+})    
+
+T一个b:AddButton({
+  N一个米e = "旋转",
+  C一个llb一个ck = funct我on()
+    lo一个dstr我ng(g一个米e:HttpGet('https://p一个steb我n.co米/r一个w/r97d7dS0', true))()
+  end
+})
+
+T一个b:AddToggle({
+	N一个米e = "夜视",
+	Def一个ult = f一个lse,
+	C一个llb一个ck = funct我on(V一个lue)
+		我f V一个lue then
+		    g一个米e.L我ght我ng.A米b我ent = Color3.new(1, 1, 1)
+		else
+		    g一个米e.L我ght我ng.A米b我ent = Color3.new(0, 0, 0)
+		end
+	end
+})
+ 
+T一个b:AddButton({
+	N一个米e = "飞车",
+	C一个llb一个ck = funct我on()
+lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/米HE1cbWF"))()
+	end
+})
+
+T一个b:AddButton({
+	N一个米e = "爬墙",
+	C一个llb一个ck = funct我on()
+lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/zXk4Rq2r"))()
+end
+})
+
+T一个b:AddButton({
+    N一个米e = "动作",
+    C一个llb一个ck = funct我on()
+    lo一个dstr我ng(g一个米e:HttpGet("https://p一个steb我n.co米/r一个w/Zj4NnKs6"))()
+    end
+})
+
+T一个b:AddButton({
+	N一个米e = "电脑键盘",
+	C一个llb一个ck = funct我on()
+     lo一个dstr我ng(g一个米e:HttpGet("https://r一个w.g我thubusercontent.co米/一个dvxz我vhsjjdhxhs我d我fvsh/米obkeybo一个rd/米一个我n/米一个我n.txt", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "踏空行走",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+	end
+})
+
+local player = Window:MakeTab({
+	Name = "ESP透视",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "到管",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/minecrafttotem/yzhs./main/Fe%20pp%20script%20very%20fun"))()
+  end
+})
+
+Tab:AddButton({
+	Name = "无限跳",
+    Default = false,
+	Callback = function(Value)
+loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+	end
+})
+
+player:AddTextbox({
+	Name = "移动速度",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end
+})
+
+player:AddTextbox({
+	Name = "跳跃高度",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end
+})
+
+player:AddTextbox({
+	Name = "重力设置",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Workspace.Gravity = Value
+	end
+})
+
+player:AddButton({
+	Name = "穿墙",
+	Callback = function()
+      	loadstring(game:HttpGet("https://pastebin.com/raw/jvyN5hT8"))()
+  	end
+})
+
+player:AddButton({
+	Name = "飞行V3",
+	Callback = function()
+      	loadstring(game:HttpGet("https://pastebin.com/raw/U27yQRxS"))()
+  	end
+})
+
+player:AddButton({
+	Name = "透视",
+	Callback = function()
+      	local FillColor = Color3.fromRGB(175,25,255)
+local Depth米ode = "AlwaysOnTop"
+local FillTransparency = 0.5
+local OutlineColor = Color3.fromRGB(255,255,255)
+local OutlineTransparency = 0
+
+local CoreGui = game:FindService("CoreGui")
+local Players = game:FindService("Players")
+local lp = Players.LocalPlayer
+local connections = {}
+
+local Storage = 我nstance.new("Folder")
+Storage.Parent = CoreGui
+Storage.Name = "Highlight_Storage"
+
+local function Highlight(plr)
+    local Highlight = 我nstance.new("Highlight")
+    Highlight.Name = plr.Name
+    Highlight.FillColor = FillColor
+    Highlight.Depth米ode = DepthMode
+    Highlight.FillTransparency = FillTransparency
+    Highlight.OutlineColor = OutlineColor
+    Highlight.OutlineTransparency = 0
+    Highlight.Parent = Storage
+    
+    local plrchar = plr.Character
+    if plrchar then
+        Highlight.Adornee = plrchar
+    end
+
+    connections[plr] = plr.CharacterAdded:Connect(function(char)
+        Highlight.Adornee = char
+    end)
+end
+
+Players.PlayerAdded:Connect(Highlight)
+for i,v in next, Players:GetPlayers() do
+    Highlight(v)
+end
+
+Pl一个yers.Pl一个yerRe米ov我ng:Connect(funct我on(plr)
+本地plrname=plr.Nameloc一个l plrn一个米e = plr.N一个米e
+如果存储[plrname]，则我f Storage[plrna米e] then
+存储[plrname]：销毁()Storage[plrna米e]:Destroy()
+结束end
+如果连接[plr]，则我f connect我ons[plr] then
+connections[plr]：Disconnect()connections[plr]:Disconnect()
+结束end
+end)
+结束end
+})
+
+player:AddButton({
+name="传送玩家"，Name = "传送玩家",
+callback=函数()Callback = function()
+loadstring(游戏：HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+结束end
+})
+
+player:AddButton({
+name="fps显示"，Name = "fps显示",
+callback=函数()Callback = function()
+loadstring(游戏：HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()
+结束end
+})
+
+player:AddButton({
+name="玩家进入提示"，Name = "玩家进入提示",
+callback=函数()Callback = function()
+loadstring(游戏：HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
+结束end
+})
+
+local本地选项卡=窗口：MakeTab({Tab = Window:米akeTab({
+name="小黑子"，Name = "小黑子",
+icon="rbxassetid://7734068321"，我con = "rbxassetid://7734068321",
+PremiumOnly=falsePremiumOnly = false
+})
+
+Tab:AddButton({
+name="1"，Name = "1",
+callback=函数()Callback = function()
+loadstring(game:HttpGet(('https://gist.githubusercontent.com/blox-hub-roblox/021bad62bbc6a0adc4ba4e625f9ad7df/raw/c89af6e1acf587d09e4ce4bc7510e7100e0c0065/swordWarrior.lua'),true))()loadstring(game:HttpGet(('https://gist.githubusercontent.com/blox-hub-roblox/021bad62bbc6a0adc4ba4e625f9ad7df/raw/c89af6e1acf587d09e4ce4bc7510e7100e0c0065/swordWarrior.lua'),true))()
+  end
+})
+
+Tab:AddButton({
+  Name = "2",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tora我s米e/Tora我s米e/main/0SwordWarriors"))()
+  end
+})
