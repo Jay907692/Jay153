@@ -40,9 +40,9 @@ end
 })    
 
 Tab:AddButton({
-  Name = "旋转（暂不可用）",
+  Name = "IY指令中文版",
   Callback = function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,87,97,110,103,122,104,101,104,97,111,104,47,102,108,121,45,97,119,97,121,47,109,97,105,110,47,37,69,54,37,56,67,37,56,55,37,69,52,37,66,66,37,56,65,37,69,52,37,66,56,37,65,68,37,69,54,37,57,54,37,56,55,46,116,120,116})end)())))()
   end
 })
 
@@ -361,22 +361,22 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-    Name = "🏳️‍🌈极速",
+    Name = "森林中的99day",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
 
 Tab:AddButton({
-  Name = "1-会覆盖",
+  Name = "超强99夜脚本",
   Callback = function()
-    loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\98\111\121\115\99\112\47\98\101\116\97\47\109\97\105\110\47\37\69\57\37\56\48\37\57\70\37\69\53\37\66\65\37\65\54\37\69\55\37\56\50\37\66\56\37\69\56\37\66\53\37\66\55\46\108\117\97'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gycgchgyfytdttr/shenqin/refs/heads/main/99day.lua"))()
   end
 })
 
 Tab:AddButton({
-    Name = "开启卡宠",
+    Name = "空",
     Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()
     end
 })
 
@@ -454,7 +454,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-    Name = "1",
+    Name = "脚本",
     Callback = function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/BorkWare/main/Scripts/' .. game.GameId .. ".lua"))(' Watermelon ? ')
     end
@@ -683,8 +683,8 @@ Tab:AddButton({
 	Name = "青蛙",
 	Callback = function()
    
-getgenv().eom = "青蛙脚本"
-loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\39\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\68\122\120\115\81\82\68\85\39\41\41\40\41")()
+getgenv().eom = "Rb脚本中心"
+﻿loadstring(game:HttpGet("https://raw.githubusercontent.com/Yungengxin/roblox/main/RbHub-v_1.2.4"))()
     end
 })
 
@@ -696,9 +696,9 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
 })
 
 Tab:AddButton({
-    Name = "冰脚本",
+    Name = "皮脚本",
     Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/GR4ChWKv"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
     end
 })
 
