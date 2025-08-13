@@ -448,7 +448,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "🌟生存巨人🌟",
+	Name = "彩虹朋友🎯",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
@@ -456,7 +456,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "1",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/RiseValco/scripts/main/GiantSurvival.lua"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/BorkWare/main/Scripts/' .. game.GameId .. ".lua"))(' Watermelon ? ')
     end
 })
 
