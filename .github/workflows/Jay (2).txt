@@ -40,9 +40,9 @@ end
 })    
 
 Tab:AddButton({
-  Name = "旋转（暂不可用）",
+  Name = "IY指令中文",
   Callback = function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+    loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,87,97,110,103,122,104,101,104,97,111,104,47,102,108,121,45,97,119,97,121,47,109,97,105,110,47,37,69,54,37,56,67,37,56,55,37,69,52,37,66,66,37,56,65,37,69,52,37,66,56,37,65,68,37,69,54,37,57,54,37,56,55,46,116,120,116})end)())))()
   end
 })
 
@@ -474,15 +474,15 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "⭐️幸运方块战地⭐️",
+	Name = "⭐️森林中的99夜⭐️",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 player:AddButton({ 
-	Name = "1",
+	Name = "99day脚本",
 	Callback = function()
-      	loadstring(game:HttpGet("https://github.com/bruhhwtf/LUCKY-BLOCKS-Battlegrounds-GUI/raw/main/Main"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gycgchgyfytdttr/shenqin/refs/heads/main/99day.lua"))()
   	end
 })
 
@@ -666,9 +666,9 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "🇨🇳脚本中心🇨🇳",
+    Name = "Rb脚本中心",
     Callback = function()
-    loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\103\101\109\120\72\119\65\49"))()
+﻿loadstring(game:HttpGet("https://raw.githubusercontent.com/Yungengxin/roblox/main/RbHub-v_1.2.4"))()
     end
 })
 
