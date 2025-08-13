@@ -12,7 +12,7 @@ Tab:AddParagraph("作者","Jay")
 Tab:AddLabel("此脚本完全免费")
 
 local Tab = Window:MakeTab({
-	Name = "通用功能1",
+	Name = "通用功能",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
@@ -94,13 +94,13 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/
 })
 
 local player = Window:MakeTab({
-	Name = "通用功能2",
+	Name = "玩家",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:AddButton({
-  Name = "到管",
+  Name = "道管",
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/minecrafttotem/yzhs./main/Fe%20pp%20script%20very%20fun"))()
   end
@@ -232,7 +232,7 @@ player:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "小黑子",
+	Name = "鸡你太美",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
@@ -252,7 +252,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "🔥自然灾害🔥",
+	Name = "自然灾害",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
@@ -265,7 +265,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "🌈doors🌈",
+	Name = "doors",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
@@ -278,7 +278,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "🤡最强战场🤡",
+	Name = "最强战场",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
@@ -298,13 +298,13 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-    Name = "⭐俄亥俄⭐",
+    Name = "俄亥俄州",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
 
 Tab:AddButton({
-    Name = "🐲指令脚本🐲",
+    Name = "指令脚本",
     Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/longshulol/long/main/longshu/Ohio"))()
     end
@@ -321,7 +321,7 @@ Tab:AddLabel("穿墙开-穿墙关")
 Tab:AddLabel("拳击光环开-拳击光环关")
 
 local Tab = Window:MakeTab({
-    Name = "👋巴掌大战👋",
+    Name = "巴掌大战",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
@@ -334,7 +334,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "🐲指令脚本🐲",
+    Name = "指令脚本",
     Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/longshulol/long/main/longshu/bazhang"))()
     end
@@ -348,7 +348,7 @@ Tab:AddLabel("全开功能有:防编辑，防毒液，防黑洞，防死神")
 Tab:AddLabel("防雷神，防rob，防秒杀手套，管理员预警，防踢")
 
 local Tab = Window:MakeTab({
-    Name = "✨忍者✨",
+    Name = "忍者",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
@@ -361,7 +361,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-    Name = "🏳️‍🌈极速",
+    Name = "极速",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
@@ -388,20 +388,20 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-    Name = "💪力量",
+    Name = "力量传奇",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
 
 Tab:AddButton({
-    Name = "💪力量传奇1",
+    Name = "力量传奇1",
     Callback = function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
     end
 })
 
 Tab:AddButton({
-    Name = "💪力量传奇2",
+    Name = "力量传奇2",
     Callback = function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BoaHacker/ROBLOX/main/cheat', true))()
     end
@@ -416,7 +416,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "死铁轨脚本1中文",
     Callback = function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e1cfd93b113a79773d93251b61af1e2f.lua"))()
+    ﻿loadstring(game:HttpGet("https://raw.githubusercontent.com/Mrpopcatfrombupge/FernHub/refs/heads/main/DeadRailsFarm", true))()
     end
 })
 
@@ -427,14 +427,14 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-    Name = "AX中文",
+    Name = "AX中文版",
     Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/XOTRXONY/INKGAME/main/INKGAMEE.lua", true))()
     end
 })
 
 local Tab = Window:MakeTab({
-	Name = "🌟生存巨人🌟",
+	Name = "生存巨人",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
@@ -447,7 +447,7 @@ Tab:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "🔥能力大战🔥",
+	Name = "能力大战",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -460,7 +460,7 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "⭐️幸运方块战地⭐️",
+	Name = "幸运方块战地",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -473,7 +473,7 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "👊最强拳击模拟器👊",
+	Name = "最强拳击模拟器",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -512,7 +512,7 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "🔪杀手vs警长👩‍✈️",
+	Name = "杀手vs警长",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -537,7 +537,7 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "👊打墙模拟器",
+	Name = "打墙模拟器",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -550,7 +550,7 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "逃出建筑💨",
+	Name = "逃出建筑",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -563,7 +563,7 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "🏳️‍🌈在51区生存",
+	Name = "在51区生存",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -576,7 +576,7 @@ player:AddButton({
 })
 
 local player = Window:MakeTab({
-	Name = "🥪我的餐厅",
+	Name = "我的餐厅",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -589,13 +589,13 @@ player:AddButton({
 })
 
 local Tab = Window:MakeTab({
-    Name = "🌟脚本中心🌟",
+    Name = "脚本中心",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
 
 Tab:AddButton({
-    Name = "🏳️‍🌈秋🏳️‍🌈",
+    Name = "秋脚本中心",
     Callback = function()
     local SCC_CharPool={
 [1]= tostring(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,87,83,56,53,55,57,54,48,47,45,47,109,97,105,110,47,37,69,55,37,65,55,37,56,66,37,67,50,37,66,55,37,69,56,37,56,55,37,65,65,37,69,53,37,56,56,37,66,54,37,69,56,37,56,52,37,57,65,37,69,54,37,57,67,37,65,67,37,69,54,37,57,54,37,66,48,37,69,54,37,66,65,37,57,48,37,69,55,37,65,48,37,56,49,46,116,120,116})end)()))}
@@ -604,7 +604,7 @@ loadstring(game:HttpGet(SCC_CharPool[1]))()
 })
 
 Tab:AddButton({
-    Name = "🍺杯脚本🍺",
+    Name = "杯脚本",
     Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/zuohongjian/bjb/main/bjb"))()
     end
@@ -618,7 +618,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "XC，卡密a",
+    Name = "XC卡密a",
     Callback = function()
     getgenv().XC="作者XC"loadstring(game:HttpGet("https://pastebin.com/raw/PAFzYx0F"))()
     end
@@ -632,35 +632,35 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "🥷忍脚本🥷",
+    Name = "忍脚本",
     Callback = function()
     getgenv().ren666 = "忍脚本，加载时间长请耐心"loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,90,77,115,67,56,114,104,114})end)())))();
     end
 })
 
 Tab:AddButton({
-    Name = "🌞神光脚本🌞",
+    Name = "神光脚本",
     Callback = function()
     loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,56,102,50,76,99,113,113,80})end)())))()
     end
 })
 
 Tab:AddButton({
-    Name = "🌈青脚本🌈",
+    Name = "青脚本",
     Callback = function()
     loadstring(game:HttpGet('https://rentry.co/ct293/raw'))()
     end
 })
 
 Tab:AddButton({
-    Name = "🇨🇳脚本中心🇨🇳",
+    Name = "脚本中心",
     Callback = function()
     loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\103\101\109\120\72\119\65\49"))()
     end
 })
 
 Tab:AddButton({
-    Name = "🦆鸭hub",
+    Name = "鸭hub",
     Callback = function()
     loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,81,89,49,113,112,99,115,106})end)())))()
     end
@@ -690,9 +690,9 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "脚本中心作者忘了",
+    Name = "情云脚本中心",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/sharksharksharkshark/shark-shark-shark-shark-shark/main/shark-scriptlollol.txt",true))()
+    loadstring(utf8.char((function() return table.unpack({108,111,97,100,115,116,114,105,110,103,40,103,97,109,101,58,72,116,116,112,71,101,116,40,34,104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,67,104,105,110,97,81,89,47,45,47,109,97,105,110,47,37,69,54,37,56,51,37,56,53,37,69,52,37,66,65,37,57,49,34,41,41,40,41})end)()))()
     end
 })
 
