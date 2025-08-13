@@ -416,7 +416,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "死铁轨脚本1中文",
     Callback = function()
-    ﻿loadstring(game:HttpGet("https://raw.githubusercontent.com/Mrpopcatfrombupge/FernHub/refs/heads/main/DeadRailsFarm", true))()
+    ﻿loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e1cfd93b113a79773d93251b61af1e2f.lua")
     end
 })
 
