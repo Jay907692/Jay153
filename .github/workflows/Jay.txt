@@ -298,7 +298,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-    Name = "⭐俄亥俄⭐",
+    Name = "⭐俄亥俄州⭐",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
@@ -321,7 +321,7 @@ Tab:AddLabel("穿墙开-穿墙关")
 Tab:AddLabel("拳击光环开-拳击光环关")
 
 local Tab = Window:MakeTab({
-    Name = "👋巴掌大战👋",
+    Name = "巴掌大战👋",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
@@ -334,7 +334,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "🐲指令脚本🐲",
+    Name = "指令脚本🐲",
     Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/longshulol/long/main/longshu/bazhang"))()
     end
@@ -414,9 +414,23 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-    Name = "死铁轨脚本1中文",
+    Name = "死铁轨脚本1",
     Callback = function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e1cfd93b113a79773d93251b61af1e2f.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wefwef127382/DEADRAILS.github.io/refs/heads/main/mainringta.lua"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "死铁轨脚本2",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))();
+    end
+})
+
+Tab:AddButton({
+    Name = "死铁轨刷债券",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))();
     end
 })
 
