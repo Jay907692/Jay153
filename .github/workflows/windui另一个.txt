@@ -55,10 +55,10 @@ repeat wait() until Confirmed
 --
 
 local Window = WindUI:CreateWindow({
-    Title = "WindUI Library",
+    Title = "Jay脚本1.5",
     Icon = "rbxassetid://129260712070622",
     IconThemed = true,
-    Author = "Example UI",
+    Author = "己开启反外挂",
     Folder = "CloudHub",
     Size = UDim2.fromOffset(580, 460),
     Transparent = true,
@@ -75,8 +75,8 @@ local Window = WindUI:CreateWindow({
 
     -- remove it below if you don't want to use the key system in your script.
     KeySystem = { -- <- keysystem enabled
-        Key = { "1234", "5678" },
-        Note = "Example Key System. \n\nThe Key is '1234' or '5678",
+        Key = { "ezdwf666" },
+        Note = "Example Key System. \n\n去Jay主群公告获取密码",
         -- Thumbnail = {
         --     Image = "rbxassetid://18220445082", -- rbxassetid only
         --     Title = "Thumbnail"
@@ -108,7 +108,7 @@ Window:CreateTopbarButton("MyCustomButton3", "battery-plus", function() Window:T
 
 
 Window:EditOpenButton({
-    Title = "Open Example UI",
+    Title = "JAY脚本1.5",
     Icon = "monitor",
     CornerRadius = UDim.new(0,16),
     StrokeThickness = 2,
@@ -125,7 +125,7 @@ local Tabs = {}
 
 do
     Tabs.ElementsSection = Window:Section({
-        Title = "Elements",
+        Title = "点击这里查看脚本",
         Opened = true,
     })
     
