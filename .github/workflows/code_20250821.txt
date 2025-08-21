@@ -1,0 +1,286 @@
+-- 加载OrionLib UI库（Roblox常用炫酷UI框架）
+local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/xLRUSiKx')))()
+local UIS = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+
+-- 全局变量
+local CorrectKey = "6888" -- 预设卡密
+local isVerified = false
+local UIAnimations = {}
+
+-- 创建主窗口（炫酷渐变+缩放入场）
+local Window = OrionLib:MakeWindow({
+    Name = "「JAY验证系统」",
+    HidePremium = true,
+    SaveConfig = false,
+    IntroText = "请输入授权卡密",
+    ConfigFolder = "KeySystem",
+    Icon = "rbxassetid://10828557144" -- 炫酷锁形图标
+})
+
+-- 窗口入场动画
+local windowTween = TweenService:Create(
+    Window.Parent,
+    TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
+    {Size = UDim2.new(0.35, 0, 0.45, 0), Position = UDim2.new(0.325, 0, 0.275, 0)}
+)
+Window.Parent.Size = UDim2.new(0, 0, 0, 0)
+windowTween:Play()
+
+-- 创建验证标签页
+local VerifyTab = Window:MakeTab({
+    Name = "卡密验证",
+    Icon = "rbxassetid://10828558109", -- 钥匙图标
+    PremiumOnly = false
+})
+
+-- 添加动态背景粒子效果
+local ParticleFrame = Instance.new("Frame")
+ParticleFrame.Name = "ParticleBG"
+ParticleFrame.Size = UDim2.new(1, 0, 1, 0)
+ParticleFrame.BackgroundTransparency = 1
+ParticleFrame.Parent = Window.Parent
+UIAnimations.ParticleBG = ParticleFrame
+
+-- 粒子生成函数（炫酷流动粒子）
+local function SpawnParticle()
+    if not ParticleFrame:IsDescendantOf(game:GetService("CoreGui")) then return end
+    local Particle = Instance.new("Frame")
+    Particle.Size = UDim2.new(0, math.random(3, 8), 0, math.random(3, 8))
+    Particle.Position = UDim2.new(math.random(), 0, math.random(), 0)
+    Particle.BackgroundColor3 = Color3.fromHSV(math.random(), 0.8, 1) -- 随机鲜艳颜色
+    Particle.BackgroundTransparency = 0.3
+    Particle.CornerRadius = UDim.new(1, 0) -- 圆形粒子
+    Particle.Parent = ParticleFrame
+
+    -- 粒子移动动画
+    local moveTween = TweenService:Create(
+        Particle,
+        TweenInfo.new(math.random(3, 7), Enum.EasingStyle.Linear),
+        {
+            Position = UDim2.new(math.random(), 0, math.random(), 0),
+            BackgroundTransparency = 1
+        }
+    )
+    moveTween:Play()
+    moveTween.Completed:Connect(function()
+        Particle:Destroy()
+    end)
+end
+
+-- 每0.1秒生成粒子
+local ParticleLoop = RunService.RenderStepped:Connect(function()
+    if math.random(1, 15) == 1 then
+        SpawnParticle()
+    end
+end)
+
+-- 添加卡密输入框（带聚焦动画）
+local KeyInput = VerifyTab:AddTextbox({
+    Name = "输入卡密",
+    Default = "",
+    TextDisappear = true,
+    Placeholder = "请输入4位卡密（例：6888）",
+    Callback = function(Value)
+        -- 输入时禁用空格/特殊字符
+        return Value:gsub("%W", ""):sub(1, 4)
+    end
+})
+
+-- 输入框聚焦动画
+KeyInput.TextBox.Focused:Connect(function()
+    TweenService:Create(
+        KeyInput.TextBox,
+        TweenInfo.new(0.3, Enum.EasingStyle.Quad),
+        {BorderColor3 = Color3.new(0.2, 0.8, 1), BackgroundColor3 = Color3.new(0.1, 0.1, 0.15)}
+    ):Play()
+end)
+
+KeyInput.TextBox.FocusLost:Connect(function()
+    TweenService:Create(
+        KeyInput.TextBox,
+        TweenInfo.new(0.3, Enum.EasingStyle.Quad),
+        {BorderColor3 = Color3.new(0.5, 0.5, 0.5), BackgroundColor3 = Color3.new(0.05, 0.05, 0.05)}
+    ):Play()
+end)
+
+-- 添加验证按钮（带点击反馈+特效）
+local VerifyButton = VerifyTab:AddButton({
+    Name = "验证卡密",
+    Callback = function()
+        local InputKey = KeyInput.TextBox.Text
+        local FeedbackFrame = Instance.new("Frame")
+        FeedbackFrame.Size = UDim2.new(0.8, 0, 0.15, 0)
+        FeedbackFrame.Position = UDim2.new(0.1, 0, 0.8, 0)
+        FeedbackFrame.BackgroundTransparency = 0.3
+        FeedbackFrame.CornerRadius = UDim.new(0.5, 0)
+        FeedbackFrame.Parent = Window.Parent
+        FeedbackFrame.Visible = false
+
+        local FeedbackText = Instance.new("TextLabel")
+        FeedbackText.Size = UDim2.new(1, 0, 1, 0)
+        FeedbackText.BackgroundTransparency = 1
+        FeedbackText.TextScaled = true
+        FeedbackText.Font = Enum.Font.GothamBold
+        FeedbackText.Parent = FeedbackFrame
+
+        -- 按钮点击缩放反馈
+        TweenService:Create(
+            VerifyButton.Button,
+            TweenInfo.new(0.1, Enum.EasingStyle.Quad),
+            {Size = UDim2.new(0.95, 0, 0.95, 0)}
+        ):Play()
+        task.wait(0.1)
+        TweenService:Create(
+            VerifyButton.Button,
+            TweenInfo.new(0.1, Enum.EasingStyle.Quad),
+            {Size = UDim2.new(1, 0, 1, 0)}
+        ):Play()
+
+        -- 验证逻辑
+        if InputKey == CorrectKey then
+            -- 验证成功：绿色渐变+成功动画
+            isVerified = true
+            FeedbackFrame.BackgroundColor3 = Color3.new(0.2, 0.8, 0.2)
+            FeedbackText.Text = "✅ 验证成功！正在加载功能..."
+            FeedbackText.TextColor3 = Color3.new(1, 1, 1)
+            
+            -- 成功特效：扩散光环
+            local Ring = Instance.new("Frame")
+            Ring.Size = UDim2.new(0, 0, 0, 0)
+            Ring.Position = UDim2.new(0.5, 0, 0.5, 0)
+            Ring.AnchorPoint = Vector2.new(0.5, 0.5)
+            Ring.BackgroundTransparency = 1
+            Ring.BorderColor3 = Color3.new(0.2, 0.8, 0.2)
+            Ring.BorderSizePixel = 2
+            Ring.CornerRadius = UDim.new(1, 0)
+            Ring.Parent = Window.Parent
+
+            TweenService:Create(
+                Ring,
+                TweenInfo.new(1, Enum.EasingStyle.Quad),
+                {Size = UDim2.new(2, 0, 2, 0), BackgroundTransparency = 1, BorderTransparency = 1}
+            ):Play()
+
+        else
+            -- 验证失败：红色渐变+抖动反馈
+            FeedbackFrame.BackgroundColor3 = Color3.new(0.8, 0.2, 0.2)
+            FeedbackText.Text = "❌ 卡密错误！请重新输入"
+            FeedbackText.TextColor3 = Color3.new(1, 1, 1)
+
+            -- 输入框抖动动画
+            for i = 1, 3 do
+                TweenService:Create(
+                    KeyInput.TextBox,
+                    TweenInfo.new(0.05),
+                    {Position = UDim2.new(0.02, 0, 0, 0)}
+                ):Play()
+                task.wait(0.05)
+                TweenService:Create(
+                    KeyInput.TextBox,
+                    TweenInfo.new(0.05),
+                    {Position = UDim2.new(-0.02, 0, 0, 0)}
+                ):Play()
+                task.wait(0.05)
+            end
+            TweenService:Create(
+                KeyInput.TextBox,
+                TweenInfo.new(0.05),
+                {Position = UDim2.new(0, 0, 0, 0)}
+            ):Play()
+        end
+
+        -- 显示反馈框并自动消失
+        FeedbackFrame.Visible = true
+        TweenService:Create(
+            FeedbackFrame,
+            TweenInfo.new(0.3),
+            {BackgroundTransparency = 0.1}
+        ):Play()
+        task.wait(2)
+        TweenService:Create(
+            FeedbackFrame,
+            TweenInfo.new(0.5),
+            {BackgroundTransparency = 1, Position = UDim2.new(0.1, 0, 0.9, 0)}
+        ):Play()
+        task.wait(0.5)
+        FeedbackFrame:Destroy()
+
+        -- 验证成功后关闭卡密窗口（2秒后）
+        if isVerified then
+            task.wait(2)
+            ParticleLoop:Disconnect() -- 停止粒子生成
+            TweenService:Create(
+                Window.Parent,
+                TweenInfo.new(0.6, Enum.EasingStyle.Quint, Enum.EasingDirection.In),
+                {Size = UDim2.new(0, 0, 0, 0), Transparency = 1}
+            ):Play()
+            task.wait(0.6)
+            OrionLib:Destroy() -- 销毁UI
+            -- 此处可添加验证成功后的功能加载代码
+            print("卡密验证成功！功能已解锁")
+        end
+    end
+})
+
+-- 按钮hover动画
+VerifyButton.Button.MouseEnter:Connect(function()
+    TweenService:Create(
+        VerifyButton.Button,
+        TweenInfo.new(0.3, Enum.EasingStyle.Quad),
+        {BackgroundColor3 = Color3.new(0.2, 0.6, 1)}
+    ):Play()
+end)
+
+VerifyButton.Button.MouseLeave:Connect(function()
+    TweenService:Create(
+        VerifyButton.Button,
+        TweenInfo.new(0.3, Enum.EasingStyle.Quad),
+        {BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)}
+    ):Play()
+end)
+
+-- 添加卡密提示（悬浮显示）
+local TipLabel = Instance.new("TextLabel")
+TipLabel.Name = "Tip"
+TipLabel.Size = UDim2.new(0.7, 0, 0.08, 0)
+TipLabel.Position = UDim2.new(0.15, 0, 0.7, 0)
+TipLabel.BackgroundTransparency = 1
+TipLabel.Text = "提示：卡密为4位数字"
+TipLabel.TextColor3 = Color3.new(0.7, 0.7, 0.7)
+TipLabel.TextScaled = true
+TipLabel.Font = Enum.Font.Gotham
+TipLabel.Parent = Window.Parent
+
+-- 提示框呼吸动画
+local function BreathingAnim()
+    while true do
+        TweenService:Create(
+            TipLabel,
+            TweenInfo.new(1.5, Enum.EasingStyle.Sine),
+            {TextTransparency = 0.6}
+        ):Play()
+        task.wait(1.5)
+        TweenService:Create(
+            TipLabel,
+            TweenInfo.new(1.5, Enum.EasingStyle.Sine),
+            {TextTransparency = 0.2}
+        ):Play()
+        task.wait(1.5)
+    end
+end
+task.spawn(BreathingAnim)
+
+-- 防关闭保护（验证未通过时禁止关闭窗口）
+Window.Closed:Connect(function()
+    if not isVerified then
+        -- 重新创建窗口
+        OrionLib:Destroy()
+        task.wait(0.5)
+        loadstring(game:HttpGet(script.Source))() -- 重新加载自身
+    end
+end)
+
+-- 初始化UI样式
+OrionLib:SetStyle(Color3.fromHSV(0.6, 0.6, 0.8)) -- 蓝色主色调
